@@ -4,7 +4,6 @@
 import json
 import os
 import sys
-from datetime import datetime, timezone
 
 import requests
 import yfinance as yf
@@ -77,9 +76,6 @@ def main() -> None:
     print(f"  ATH           : {ath:.4f} on {state['ath_date']}")
     print(f"  Drawdown      : {drawdown_pct:.2f}%")
 
-    state["last_price"] = current_price
-    state["last_check"] = datetime.now(timezone.utc).isoformat()
-
     triggered: list[int] = state.get("triggered_thresholds", [])
 
     for threshold in sorted(thresholds, reverse=True):  # -20, -30, -40 — fire closest first
@@ -92,8 +88,7 @@ def main() -> None:
                     f"⚠️ *Drawdown Alert: {ticker}*\n"
                     f"Drawdown: *{drawdown_pct:.2f}%* (threshold: {threshold}%)\n"
                     f"Current price: {current_price:.4f}\n"
-                    f"ATH: {ath:.4f} ({state['ath_date']})\n"
-                    f"Checked: {state['last_check'][:10]}"
+                    f"ATH: {ath:.4f} ({state['ath_date']})"
                 )
                 send_telegram(telegram_token, telegram_chat_id, msg)
 

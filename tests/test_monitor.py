@@ -11,8 +11,6 @@ from monitor import fetch_price, load_json, main, save_json, send_telegram
 BASE_STATE = {
     "ath": 100.0,
     "ath_date": "2025-01-01",
-    "last_price": None,
-    "last_check": None,
     "triggered_thresholds": [],
 }
 
