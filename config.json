@@ -1,5 +1,5 @@
 {
-  "ticker": "IMIE.DE",
+  "ticker": "SPYI.DE",
   "thresholds": [-20, -30, -40],
   "lookback_days": 365
 }

@@ -35,9 +35,10 @@ def fetch_price(ticker: str, lookback_days: int) -> tuple[float, float, str]:
     if data.empty:
         raise ValueError(f"No data returned for {ticker}")
 
-    current_price = float(data["Close"].iloc[-1])
-    high_idx = data["Close"].idxmax()
-    period_high = float(data["Close"].max())
+    close = data["Close"].squeeze()  # MultiIndex → Series for single-ticker downloads
+    current_price = float(close.iloc[-1])
+    high_idx = close.idxmax()
+    period_high = float(close.max())
     period_high_date = str(high_idx.date())
     return current_price, period_high, period_high_date
 
