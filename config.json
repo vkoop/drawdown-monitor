@@ -1,5 +1,8 @@
 {
   "ticker": "SPYI.DE",
   "thresholds": [-20, -30, -40],
-  "lookback_days": 365
+  "lookback_days": 365,
+  "velocity_days": 10,
+  "velocity_crash_threshold": -0.5,
+  "velocity_recovery_threshold": 0.3
 }

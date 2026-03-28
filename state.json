@@ -1,7 +1,16 @@
 {
   "ath": 12.24470043182373,
   "ath_date": "2026-02-25",
+  "trough": 9.722000122070312,
+  "trough_date": "2026-03-27",
   "triggered_thresholds": [
     -20
-  ]
+  ],
+  "prices": [
+    {
+      "date": "2026-03-27",
+      "price": 9.722000122070312
+    }
+  ],
+  "velocity_state": null
 }
