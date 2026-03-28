@@ -1,0 +1,5 @@
+{
+  "ticker": "IMIE.DE",
+  "thresholds": [-20, -30, -40],
+  "lookback_days": 365
+}
