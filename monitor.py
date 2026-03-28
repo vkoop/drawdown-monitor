@@ -26,7 +26,7 @@ def send_telegram(token: str, chat_id: str, message: str) -> None:
     payload = {"chat_id": chat_id, "text": message, "parse_mode": "Markdown"}
     resp = requests.post(url, json=payload, timeout=10)
     resp.raise_for_status()
-    print(f"Telegram notification sent: {message}")
+    print(f"Telegram notification sent.")
 
 
 def fetch_price(ticker: str, lookback_days: int) -> tuple[float, float, str]:
