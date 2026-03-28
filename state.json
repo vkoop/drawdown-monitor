@@ -1,5 +1,7 @@
 {
   "ath": 12.24470043182373,
   "ath_date": "2026-02-25",
-  "triggered_thresholds": []
+  "triggered_thresholds": [
+    -20
+  ]
 }
