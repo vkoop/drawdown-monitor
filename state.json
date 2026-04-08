@@ -40,7 +40,11 @@
     {
       "date": "2026-04-07",
       "price": 9.916999816894531
+    },
+    {
+      "date": "2026-04-08",
+      "price": 10.192000389099121
     }
   ],
-  "velocity_state": null
+  "velocity_state": "recovering"
 }
