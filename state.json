@@ -6,10 +6,6 @@
   "triggered_thresholds": [],
   "prices": [
     {
-      "date": "2026-04-13",
-      "price": 10.22599983215332
-    },
-    {
       "date": "2026-04-14",
       "price": 10.35200023651123
     },
@@ -44,7 +40,11 @@
     {
       "date": "2026-04-24",
       "price": 10.576000213623047
+    },
+    {
+      "date": "2026-04-27",
+      "price": 10.567999839782715
     }
   ],
-  "velocity_state": "recovering"
+  "velocity_state": null
 }
